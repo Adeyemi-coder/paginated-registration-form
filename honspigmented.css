@@ -1,0 +1,242 @@
+/* ----------------- Body & Form Container ----------------- */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #b6c3dc;
+  font-family: Arial, sans-serif;
+}
+
+#form-container {
+  width: 90%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 60px auto;
+  padding: 40px;
+}
+
+/* ----------------- Form Steps ----------------- */
+.form-step {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.form-step.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* ----------------- Input Fields & Dropdowns ----------------- */
+input, #state, .dropdown-selected {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input:focus, #state:focus, .dropdown-selected:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74,144,226,0.5);
+  outline: none;
+}
+
+input:hover, #state:hover, .dropdown-selected:hover {
+  border-color: #4a90e2;
+}
+
+/* ----------------- Buttons ----------------- */
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+
+.next-button {
+  background: #4a90e2;
+  color: white;
+}
+
+.next-button:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+  outline: none;
+}
+
+.prev-button {
+  background: #ccc;
+}
+
+#submit-button {
+  background: green;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ----------------- Headings ----------------- */
+h2 {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+/* ----------------- Drop Zones ----------------- */
+.drop-zone {
+  border: 2px dashed #4a90e2;
+  padding: 30px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #4a90e2;
+  transition: border-color 0.3s, background-color 0.3s;
+  margin-bottom: 30px;
+}
+
+.drop-zone:hover {
+  background-color: #eaf3ff;
+}
+
+#image-preview img {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+#doc-preview {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* ----------------- Confirmation & Summary ----------------- */
+#confirmation-message {
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#summary {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 18px;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#summary img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ----------------- Input Group & Error ----------------- */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* ----------------- Country Dropdown with Flag ----------------- */
+.dropdown {
+  position: relative;
+  font-family: Arial;
+  user-select: none;
+}
+
+.dropdown-selected {
+  cursor: pointer;
+  background: #fff;
+}
+
+.dropdown-selected img {
+  width: 24px;
+  height: 16px;
+}
+
+.dropdown-list {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000;
+}
+
+.dropdown-list.show {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f0f0f0;
+}
+
+.dropdown-item img {
+  width: 24px;
+  height: 16px;
+}
+.custom-file-upload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#file-btn {
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#file-btn:hover {
+  background-color: #357ab8;
+}
+
+#file-name {
+  font-style: italic;
+  color: #555;
+}
+;

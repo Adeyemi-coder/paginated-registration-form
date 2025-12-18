@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" type="text/css" href="honspigmented.css">
+</head>
+<body>
+  <div id="form-container">
+    <!-- Step 1: Personal Information -->
+    <div class="form-step" id="step-1">
+      <h2>Personal Information</h2>
+      <div class="input-group">
+        <input type="text" id="firstName" placeholder="First Name">
+        <span class="error-msg"></span>
+      </div>
+      <div class="input-group">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <span class="error-msg"></span>
+      </div>
+      <div class="input-group">
+        <input type="email" id="email" placeholder="Email">
+        <span class="error-msg"></span>
+      </div>
+      <div class="input-group">
+        <input type="tel" id="phoneNumber" placeholder="Phone Number">
+        <span class="error-msg"></span>
+      </div>
+      <button type="button" class="next-button">Next</button>
+    </div>
+    <!-- Step 2: Address Information -->
+<div class="form-step" id="step-2">
+  <h2>Address Information</h2>
+
+  <!-- Hidden country select for JS -->
+  <select id="country" hidden name="country">
+    <option value="">Select Country</option>
+    <option value="Nigeria">Nigeria</option>
+    <option value="USA">USA</option>
+    <option value="Canada">Canada</option>
+    <option value="United Kingdom">United Kingdom</option>
+    <option value="Germany">Germany</option>
+    <option value="India">India</option>
+    <option value="India">Australia</option>
+    <option value="Russia">Russia</option>
+    <option value="Brazil">Brazil</option>
+    <option value="Mexico">Mexico</option>
+    <option value="South Africa">South Africa</option>
+    <option value="Kenya">Kenya</option>
+    <option value="Egypt">Egypt</option>
+    <option value="South Korea">South Korea</option>
+    <option value="Saudi Arabia">Saudi Arabia</option>
+    <option value="Argentina">Argentina</option>
+    <option value="Switzerland">Switzerland</option>
+    <option value="Sweden">Sweden</option>
+    <option value="Norway">Norway</option>
+    <option value="Finland">Finland</option>
+    <option value="Denmark">Denmark</option>
+    <option value="Netherlands">Netherlands</option>
+    <option value="Belgium">Belgium</option>
+    <option value="Poland">Poland</option>
+    <option value="Turkey">Turkey</option>
+    <option value="Indonesia">Indonesia</option>
+    <option value="Malaysia">Malaysia</option>
+    <option value="Singapore">Singapore</option>
+    <option value="Thailand">Thailand</option>
+    <option value="Vietnam">Vietnam</option>
+    <option value="Philippines">Philippines</option>
+    
+  </select>
+
+  <!-- Custom Dropdown with Flag -->
+  <div class="input-group">
+    <div class="dropdown" id="countryDropdown">
+      <div class="dropdown-selected">
+        <img src="" alt="" style="margin-right: 5px; display: none;">
+        <span>Select Country</span>
+      </div>
+      <div class="dropdown-list">
+        <div class="dropdown-item" data-name="Nigeria">
+          <img src="https://flagcdn.com/w20/ng.png" style="margin-right: 5px;"> Nigeria
+        </div>
+        <div class="dropdown-item" data-name="USA">
+          <img src="https://flagcdn.com/w20/us.png" style="margin-right: 5px;"> USA
+        </div>
+        <div class="dropdown-item" data-name="Canada">
+          <img src="https://flagcdn.com/w20/ca.png" style="margin-right: 5px;"> Canada
+        </div>
+        <div class="dropdown-item" data-name="United Kingdom">
+          <img src="https://flagcdn.com/w20/gb.png" style="margin-right: 5px;"> United Kingdom
+        </div>
+        <div class="dropdown-item" data-name="Germany">
+          <img src="https://flagcdn.com/w20/de.png" style="margin-right: 5px;"> Germany
+        </div>
+        <div class="dropdown-item" data-name="India">
+          <img src="https://flagcdn.com/w20/in.png" style="margin-right: 5px;"> India
+        </div>
+        <div class="dropdown-item" data-code="au" data-name="Australia">
+      <img src="https://flagcdn.com/w20/au.png" alt="Australia"> Australia
+    </div>
+    <div class="dropdown-item" data-code="ru" data-name="Russia">
+      <img src="https://flagcdn.com/w20/ru.png" alt="Russia"> Russia
+    </div>
+    <div class="dropdown-item" data-code="br" data-name="Brazil">
+      <img src="https://flagcdn.com/w20/br.png" alt="Brazil"> Brazil
+    </div>
+    <div class="dropdown-item" data-code="mx" data-name="Mexico">
+      <img src="https://flagcdn.com/w20/mx.png" alt="Mexico"> Mexico
+    </div>
+    <div class="dropdown-item" data-code="za" data-name="South Africa">
+      <img src="https://flagcdn.com/w20/za.png" alt="South Africa"> South Africa
+    </div>
+    <div class="dropdown-item" data-code="ke" data-name="Kenya">
+      <img src="https://flagcdn.com/w20/ke.png" alt="Kenya"> Kenya
+    </div>
+    <div class="dropdown-item" data-code="eg" data-name="Egypt">
+      <img src="https://flagcdn.com/w20/eg.png" alt="Egypt"> Egypt
+    </div>
+    <div class="dropdown-item" data-code="ng" data-name="Nigeria">
+      <img src="https://flagcdn.com/w20/ng.png" alt="Nigeria"> Nigeria
+    </div>
+    <div class="dropdown-item" data-code="kr" data-name="South Korea">
+      <img src="https://flagcdn.com/w20/kr.png" alt="South Korea"> South Korea
+    </div>
+    <div class="dropdown-item" data-code="sa" data-name="Saudi Arabia">
+      <img src="https://flagcdn.com/w20/sa.png" alt="Saudi Arabia"> Saudi Arabia
+    </div>
+    <div class="dropdown-item" data-code="ar" data-name="Argentina">
+      <img src="https://flagcdn.com/w20/ar.png" alt="Argentina"> Argentina
+    </div>
+    <div class="dropdown-item" data-code="ch" data-name="Switzerland">
+      <img src="https://flagcdn.com/w20/ch.png" alt="Switzerland"> Switzerland
+    </div>
+    <div class="dropdown-item" data-code="se" data-name="Sweden">
+      <img src="https://flagcdn.com/w20/se.png" alt="Sweden"> Sweden
+    </div>
+    <div class="dropdown-item" data-code="no" data-name="Norway">
+      <img src="https://flagcdn.com/w20/no.png" alt="Norway"> Norway
+    </div>
+    <div class="dropdown-item" data-code="fi" data-name="Finland">
+      <img src="https://flagcdn.com/w20/fi.png" alt="Finland"> Finland
+    </div>
+    <div class="dropdown-item" data-code="dk" data-name="Denmark">
+      <img src="https://flagcdn.com/w20/dk.png" alt="Denmark"> Denmark
+    </div>
+    <div class="dropdown-item" data-code="nl" data-name="Netherlands">
+      <img src="https://flagcdn.com/w20/nl.png" alt="Netherlands"> Netherlands
+    </div>
+    <div class="dropdown-item" data-code="be" data-name="Belgium">
+      <img src="https://flagcdn.com/w20/be.png" alt="Belgium"> Belgium
+    </div>
+    <div class="dropdown-item" data-code="pl" data-name="Poland">
+      <img src="https://flagcdn.com/w20/pl.png" alt="Poland"> Poland
+    </div>
+    <div class="dropdown-item" data-code="tr" data-name="Turkey">
+      <img src="https://flagcdn.com/w20/tr.png" alt="Turkey"> Turkey
+    </div>
+    <div class="dropdown-item" data-code="id" data-name="Indonesia">
+      <img src="https://flagcdn.com/w20/id.png" alt="Indonesia"> Indonesia
+    </div>
+    <div class="dropdown-item" data-code="my" data-name="Malaysia">
+      <img src="https://flagcdn.com/w20/my.png" alt="Malaysia"> Malaysia
+    </div>
+    <div class="dropdown-item" data-code="sg" data-name="Singapore">
+      <img src="https://flagcdn.com/w20/sg.png" alt="Singapore"> Singapore
+    </div>
+    <div class="dropdown-item" data-code="th" data-name="Thailand">
+      <img src="https://flagcdn.com/w20/th.png" alt="Thailand"> Thailand
+    </div>
+    <div class="dropdown-item" data-code="vn" data-name="Vietnam">
+      <img src="https://flagcdn.com/w20/vn.png" alt="Vietnam"> Vietnam
+    </div>
+    <div class="dropdown-item" data-code="ph" data-name="Philippines">
+      <img src="https://flagcdn.com/w20/ph.png" alt="Philippines"> Philippines
+    </div>
+      </div>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- State Select -->
+  <div class="input-group">
+    <select id="state" name="state">
+      <option value="">Select State</option>
+    </select>
+    <span class="error-msg"></span>
+  </div>
+
+  <div class="input-group">
+    <input type="text" id="city" placeholder="City" name="city">
+    <span class="error-msg"></span>
+  </div>
+
+  <div class="input-group">
+    <input type="text" id="zipCode" placeholder="Zip/Postal Code" name="zipCode">
+    <span class="error-msg"></span>
+  </div>
+
+  <button type="button" class="prev-button">Previous</button>
+  <button type="button" class="next-button">Next</button>
+</div>
+
+    
+
+
+    <!-- Step 3: Upload Profile Image -->
+    <div class="form-step" id="step-3">
+      <h2>Upload Profile Image</h2>
+      <div class="drop-zone" id="image-drop">Drop Image or Click</div>
+      <div class="input-group">
+        <input type="file" accept="image/*" id="image-input" name="profileImage" hidden>
+        <div id="image-preview" style="margin-top: 10px;"></div>
+        <span class="error-msg"></span>
+      </div>
+      <button type="button" class="prev-button">Previous</button>
+      <button type="button" class="next-button">Next</button>
+    </div>
+
+    <!-- Step 4: Upload Document -->
+    <div class="form-step" id="step-4">
+      <h2>Upload Document</h2>
+      <div class="drop-zone" id="doc-drop">Drop Document or Click</div>
+      <div class="input-group">
+        <input type="file" accept=".pdf,.doc,.docx" id="doc-input" name="documentFile" hidden>
+        <div id="doc-preview" style="margin-top: 10px;"></div>
+        <span class="error-msg"></span>
+      </div>
+      <button type="button" class="prev-button">Previous</button>
+      <button type="button" class="next-button">Next</button>
+    </div>
+
+    <!-- Step 5: Confirm & Submit -->
+    <div class="form-step" id="step-5">
+      <h2>Confirm & Submit</h2>
+      <p>Review your details and submit</p>
+      <div id="summary"></div>
+      <button type="button" class="prev-button">Previous</button>
+      <button id="submit-button">Submit</button>
+    </div>
+
+  </div>
+
+  <div id="confirmation-message" style="display: none;">
+    <h2>Thank you for registering!</h2>
+  </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+  (function() {
+      emailjs.init("FanJ10FdGvb0Kxvmv"); 
+  })();
+</script>
+
+<script>
+/*document.querySelector("#submit-button").addEventListener("click", function(event)*/ 
+document.querySelector("#submit-button").addEventListener("click", function(event) 
+{
+    event.preventDefault();
+const confirmationMessage = document.getElementById("confirmation-message");
+    const submitBtn = this;
+
+  
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    const formData = {
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        email: document.getElementById("email").value,
+        phoneNumber: document.getElementById("phoneNumber").value,
+        country: document.getElementById("country").value,
+        state: document.getElementById("state").value,
+        city: document.getElementById("city").value,
+        zipCode: document.getElementById("zipCode").value,
+    };
+    emailjs.send("service_jta2sai", "template_gxdyt84", formData)
+    .then(() => {
+        alert("Form submitted and email sent successfully!");
+    })
+    .catch((error) => {
+        console.log("EmailJS Error:", error);
+        alert("Failed to send message.");
+    });
+});
+</script>
+
+  <script src="honspigmented.js"></script>
+</body>
+</html>
